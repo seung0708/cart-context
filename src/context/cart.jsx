@@ -21,7 +21,7 @@ export const CartProvider = ({children}) => {
         }
     }
 
-    const remoteFromCart = item => {
+    const removeFromCart = item => {
         const isItemInCart = cartItems.find(cartItem => cartItem.id == item.id);
         
         if(isItemInCart.quantity === 1) {
@@ -60,7 +60,7 @@ export const CartProvider = ({children}) => {
             value={{
                 cartItems,
                 addToCart,
-                remoteFromCart,
+                removeFromCart,
                 clearCart,
                 getCartTotal
             }}
